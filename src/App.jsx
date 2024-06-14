@@ -15,16 +15,32 @@ const App = () => {
   useScrollSnap({ ref: scrollRef, duration: 5, isArrowKeysEnabled: true });
   return (
     <>
-      <div ref={scrollRef}>
-        <Hero />
-        <Intro />
-        <Experiences />
-        <Activities />
-        <Projects />
-        <Skills />
-        <Contact />
-        <Footer />
-      </div>
+      {
+        // if width is less than 768px, then show the mobile version of the website
+        window.innerWidth < 768 ? (
+          <div>
+            <Hero />
+            <Intro />
+            <Experiences />
+            <Activities />
+            <Projects />
+            <Skills />
+            <Contact />
+            <Footer />
+          </div>
+        ) : (
+          <div ref={scrollRef}>
+            <Hero />
+            <Intro />
+            <Experiences />
+            <Activities />
+            <Projects />
+            <Skills />
+            <Contact />
+            <Footer />
+          </div>
+        )
+      }
     </>
   );
 };

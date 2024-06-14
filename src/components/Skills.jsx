@@ -12,6 +12,10 @@ const Skills = () => {
     colors: ["#000000", "#3b82f6", "orange"],
     padding: 30,
   };
+  if (window.innerWidth < 768) {
+    options.fontSizes = [10, 30];
+    options.padding = 10;
+  }
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-white p-10">
       <TitleContent title="Skills">

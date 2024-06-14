@@ -37,17 +37,14 @@ jobs:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/master'
-
     steps:
       - name: Download artifact
         uses: actions/download-artifact@v4
         with:
           name: production-files
           path: ./dist
-
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v4.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          build_dir: ./dist
+        

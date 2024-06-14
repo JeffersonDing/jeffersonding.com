@@ -12,7 +12,7 @@ import Contact from "./components/Contact";
 
 const App = () => {
   const scrollRef = useRef(null);
-  useScrollSnap({ ref: scrollRef, duration: 10, isArrowKeysEnabled: true });
+  useScrollSnap({ ref: scrollRef, duration: 5, isArrowKeysEnabled: true });
   return (
     <>
       <div ref={scrollRef}>

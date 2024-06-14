@@ -6,8 +6,8 @@ export const config = {
     "Finance and Entrepreneurship @ Wharton",
   ],
   github: "https://github.com/JeffersonDing",
-  linkedin: "linkedin",
-  email: "me@jeffersonding.com",
+  linkedin: "https://www.linkedin.com/in/dingjefferson/",
+  email: "mail@jeffersonding.com",
   intro:
     "I'm currently a sophomore student at the University of Pennsylvania's [M&T program](https://fisher.wharton.upenn.edu/), studying CMPE and Finance. I'm particularly interested in spaces like fintech, cybersecurity, AI, and web3. You can see some of the projects I've worked on and companies I've built in those spaces in a bit. \n I enjoy working with tech and computers, on the market side as well. ",
   experiences: [

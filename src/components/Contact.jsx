@@ -18,7 +18,7 @@ const Contact = () => {
             📧
           </span>
           <span className="font-bold ml-2">Email:</span>
-          <a href="mailto:me@jeffersonding.com" className="underline atag ml-1">
+          <a href={`mailto:${config.email}`} className="underline atag ml-1">
             {config.email}
           </a>
         </p>

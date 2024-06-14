@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+
+@property --offset {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0;
+}
+
+.atag {
+  text-underline-offset: var(--offset, 0.2em);
+  text-decoration: underline 0.15em;
+  transition:
+    --offset 200ms,
+    text-decoration-color 200ms,
+    font-weight 200ms;
+}
+
+a:hover,
+a:focus {
+  --offset: 0.2em;
+  text-decoration-color: orange;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
+  font-weight: 400;
+}
+
+@supports not (background: paint(something)) {
+  a {
+    transition:
+      text-underline-offset 400ms,
+      text-decoration-color 400ms;
+  }
+
+  a:hover,
+  a:focus {
+    text-underline-offset: 0.4em;
+  }
+}
